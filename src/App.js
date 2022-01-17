@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import Home from "./pages/Home";
+import Populars from "./pages/Populars";
 import {
   BrowserRouter,
   Switch,
@@ -21,8 +21,8 @@ function App() {
        <Route history={history}>
         <Switch>
           <Route path="/detail/:id" component={Details} />
-          <Route exact path="/" component={Home}/>
-          <Route path ="/populars" component ={Home}/>
+          <Route exact path="/" component={Upcoming}/>
+          <Route path ="/populars" component ={Populars}/>
           <Route path ="/toprated" component={Toprated}/>
           <Route path ="/upcoming" component={Upcoming}/>
           </Switch>

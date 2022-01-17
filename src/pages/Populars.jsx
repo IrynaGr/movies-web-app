@@ -4,7 +4,7 @@ import Navbar from "../Components/Navbar";
 import Search from "../Components/Search";
 import Modal from "../Components/Modal";
 
-const Home = () => {
+const Populars = () => {
   const [page, setPage] = useState(1); //pagination
   const [data, setResults] = useState([]); //save for api data
   const [dataVideo, setMovie] = useState(undefined); //save video data
@@ -83,4 +83,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default Populars;

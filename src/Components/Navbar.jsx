@@ -16,8 +16,8 @@ const Navbar = () => {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container w-100">
-        <Link to="/populars" className="navbar-brand">
-          Movies Web App
+        <Link to="/upcoming" className="navbar-brand">
+          Upcoming Movies Web App
         </Link>
           <button
             className="navbar-toggler"
@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav ml-auto">
               {/* Checking the current path name using javascript ternary operator and if true adding active classname to it */}
-              <li className={splitLocation[1] === "upcoming" ? "active" : ""}>
+              <li className={splitLocation[1] === "upcoming" || splitLocation[1] === "" ? "active" : ""}>
                 <Link to="/upcoming" className="nav-item"> 
                   <span className="nav-link" href="!#">
                     upcoming
@@ -47,7 +47,7 @@ const Navbar = () => {
                   </span>
                 </Link>
               </li>
-              <li className={(splitLocation[1] === "populars" || splitLocation[1] === "") ? "active" : ""}>
+              <li className={(splitLocation[1] === "populars") ? "active" : ""}>
                 <Link to="/populars" className="nav-item">
                   <span className="nav-link" href="!#">
                     populars
